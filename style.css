@@ -1,0 +1,164 @@
+/* Import a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- AESTHETIC ANIMATED BACKGROUND --- */
+body {
+    /* Soft, dreamy pastel gradient (Pink, Purple, Blue) */
+    background: linear-gradient(-45deg, #fbc2eb, #a18cd1, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    background-attachment: fixed; /* Keeps it still while scrolling */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* The animation keyframes that make the background move */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Menu Styles */
+.site-header {
+    background-color: rgba(255, 255, 255, 0.15); /* Transparent glass header */
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #4a4a4a; /* Darker text for readability against light glass */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: #8e44ad; /* Purple accent on hover */
+    border-bottom: 2px solid #8e44ad;
+}
+
+/* --- FROSTED GLASS RESUME CARD --- */
+.resume-container {
+    max-width: 800px;
+    margin: 50px auto;
+    /* More transparent white to let the animated colors peek through */
+    background: rgba(255, 255, 255, 0.75); 
+    padding: 50px;
+    border-radius: 20px; /* Softer, rounder corners */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); /* Deep aesthetic shadow */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Glass edge highlight */
+    backdrop-filter: blur(12px); /* The frosted glass blur effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+}
+
+/* Profile Header Styles */
+.profile-header {
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: translateY(-5px); /* Floats up slightly on hover */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.profile-header h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.profile-header p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Section Styles */
+.resume-section {
+    margin-bottom: 35px;
+}
+
+.resume-section h2 {
+    font-size: 1.6rem;
+    color: #6c5ce7; /* Aesthetic soft purple/blue for headers */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume-section h3 {
+    font-size: 1.25rem;
+    color: #2d3436;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.resume-section p {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.resume-section ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.resume-section li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Custom aesthetic bullet points */
+.resume-section li::before {
+    content: "✦"; /* Sparkle/star bullet point */
+    color: #a18cd1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+}
